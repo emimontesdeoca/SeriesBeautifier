@@ -5,11 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AnimeBeautify"
         mc:Ignorable="d"
-        Title="SeriesBeautifier" Height="468.636" Width="390" ResizeMode="NoResize" Icon="93124-200.png">
+        Title="SeriesBeautifier" Height="480" Width="390" ResizeMode="NoResize" Icon="93124-200.png">
     <Grid Margin="0,0,2,0">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="225*"/>
-            <ColumnDefinition Width="157*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="41*"/>
@@ -18,17 +18,19 @@
         </Grid.RowDefinitions>
         <TextBox x:Name="foldertxt" HorizontalAlignment="Left" Height="23" Margin="10,61,0,0" TextWrapping="Wrap" Text="Folder location" VerticalAlignment="Top" Width="270" Grid.ColumnSpan="2"/>
         <Label Content="SeriesBeautifier" HorizontalAlignment="Left" Margin="102,0,0,0" VerticalAlignment="Top" FontSize="24" Height="42" Width="178" Grid.ColumnSpan="2"/>
-        <Button x:Name="beautifybtn" Content="Beautify" HorizontalAlignment="Left" Margin="148,13,0,0" VerticalAlignment="Top" Width="94" RenderTransformOrigin="0.522,0.46" Grid.Row="2" Click="beautifybtn_Click" Grid.ColumnSpan="2"/>
-        <Button x:Name="searchbtn" Content="Search" HorizontalAlignment="Left" Margin="65.556,57,0,0" VerticalAlignment="Top" Width="75" Click="searchbtn_Click" Grid.Column="1"/>
-        <Separator HorizontalAlignment="Left" Height="9" Margin="0,77,-2,0" VerticalAlignment="Top" Width="384" Grid.Row="2" Grid.ColumnSpan="2"/>
+        <Button x:Name="beautifybtn" Content="Beautify" HorizontalAlignment="Left" Margin="144,24,0,0" VerticalAlignment="Top" Width="94" RenderTransformOrigin="0.522,0.46" Click="beautifybtn_Click" Grid.ColumnSpan="2" Grid.Row="2"/>
+        <Button x:Name="searchbtn" Content="Search" HorizontalAlignment="Left" Margin="100,58,0,0" VerticalAlignment="Top" Width="75" Click="searchbtn_Click" Grid.Column="1"/>
+        <Separator HorizontalAlignment="Left" Height="9" Margin="0,84,-2,0" VerticalAlignment="Top" Width="384" Grid.Row="2" Grid.ColumnSpan="2"/>
         <Separator HorizontalAlignment="Left" Height="25" Margin="0,33,-2,0" VerticalAlignment="Top" Width="384" Grid.ColumnSpan="2"/>
-        <ProgressBar x:Name="progressbar" HorizontalAlignment="Left" Height="10" Margin="13,60,0,0" VerticalAlignment="Top" Width="351" Grid.Row="2" Grid.ColumnSpan="2"/>
-        <TextBlock Margin="0,86,7,4" Grid.Row="2" HorizontalAlignment="Right" Width="104" Grid.Column="1" >
+        <ProgressBar x:Name="progressbar" HorizontalAlignment="Left" Height="10" Margin="15,69,0,0" VerticalAlignment="Top" Width="351" Grid.Row="2" Grid.ColumnSpan="2"/>
+        <TextBlock Margin="0,93,7,3" Grid.Row="2" HorizontalAlignment="Right" Width="104" Grid.Column="1" >
     <Hyperlink NavigateUri="https://twitter.com/emimontesdeocaa" RequestNavigate="Hyperlink_RequestNavigate">Twitter</Hyperlink>
     
     <Hyperlink NavigateUri="https://github.com/emimontesdeoca/SeriesBeautifier" RequestNavigate="Hyperlink_RequestNavigate">Source code</Hyperlink>
         </TextBlock>
-        <TextBox x:Name="log" HorizontalAlignment="Left" Margin="13,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="203" Width="353" ScrollViewer.VerticalScrollBarVisibility="Visible"  ScrollViewer.CanContentScroll="True" IsReadOnly="True" Grid.ColumnSpan="2"/>
-        <Label Content="Log" HorizontalAlignment="Left" Margin="10,99,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.78,0.052" Height="26" Width="30"/>
+        <TextBox x:Name="log" HorizontalAlignment="Left" Margin="13,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="203" Width="353" ScrollViewer.VerticalScrollBarVisibility="Hidden"  ScrollViewer.CanContentScroll="True" IsReadOnly="True" Grid.ColumnSpan="2" Grid.RowSpan="3" VerticalContentAlignment="Top" HorizontalContentAlignment="Left"/>
+        <Label Content="Log" HorizontalAlignment="Left" Margin="10,112,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.78,0.052" Height="26" Width="30"/>
+        <CheckBox x:Name="capitalize" Content="Capitalize names" HorizontalAlignment="Left" Margin="75,95,0,0" VerticalAlignment="Top" Height="18" Width="116"/>
+        <CheckBox x:Name="sort" Content="Sort in folders" HorizontalAlignment="Left" Margin="5,95,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.132,0.056" Width="101" Height="18" Grid.Column="1"/>
     </Grid>
 </Window>
