@@ -11,7 +11,7 @@ namespace AnimeBeautify
     {
         public static async Task<string> beautifyString(string path)
         {
-            string res = path;
+            string res = "";
             await Task.Run(() =>
             {
 
@@ -19,7 +19,7 @@ namespace AnimeBeautify
                 try
                 {
                     /// Undescore
-                    res = res.Replace("_", " ");
+                    path = path.Replace("_", " ");
 
                     string[] splitsource = Regex.Split(path, @"\[.*?\]");
                     string resWithoutSource = "";
