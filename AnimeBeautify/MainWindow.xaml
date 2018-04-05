@@ -19,7 +19,7 @@
         <TextBox x:Name="foldertxt" HorizontalAlignment="Left" Height="23" Margin="10,61,0,0" TextWrapping="Wrap" Text="Folder location" VerticalAlignment="Top" Width="270" Grid.ColumnSpan="2"/>
         <Label Content="SeriesBeautifier" HorizontalAlignment="Left" Margin="102,0,0,0" VerticalAlignment="Top" FontSize="24" Height="42" Width="178" Grid.ColumnSpan="2"/>
         <Button x:Name="beautifybtn" Content="Beautify" HorizontalAlignment="Left" Margin="144,24,0,0" VerticalAlignment="Top" Width="94" RenderTransformOrigin="0.522,0.46" Click="beautifybtn_Click" Grid.ColumnSpan="2" Grid.Row="2"/>
-        <Button x:Name="searchbtn" Content="Search" HorizontalAlignment="Left" Margin="100,58,0,0" VerticalAlignment="Top" Width="75" Click="searchbtn_Click" Grid.Column="1"/>
+        <Button x:Name="searchbtn" Content="Search" HorizontalAlignment="Left" Margin="105,58,0,0" VerticalAlignment="Top" Width="75" Click="searchbtn_Click" Grid.Column="1"/>
         <Separator HorizontalAlignment="Left" Height="9" Margin="0,84,-2,0" VerticalAlignment="Top" Width="384" Grid.Row="2" Grid.ColumnSpan="2"/>
         <Separator HorizontalAlignment="Left" Height="25" Margin="0,33,-2,0" VerticalAlignment="Top" Width="384" Grid.ColumnSpan="2"/>
         <ProgressBar x:Name="progressbar" HorizontalAlignment="Left" Height="10" Margin="15,69,0,0" VerticalAlignment="Top" Width="351" Grid.Row="2" Grid.ColumnSpan="2"/>
