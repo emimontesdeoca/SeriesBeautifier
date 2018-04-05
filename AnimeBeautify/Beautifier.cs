@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace AnimeBeautify
@@ -20,12 +21,30 @@ namespace AnimeBeautify
                     /// Undescore
                     res = res.Replace("_", " ");
 
-                    ///Source
-                    res = res.Split(']')[1];
-                    res = res.Split('[')[0];
+                    string[] splitsource = Regex.Split(path, @"\[.*?\]");
+                    string resWithoutSource = "";
+                    foreach (var item in splitsource)
+                    {
+                        if (!String.IsNullOrWhiteSpace(item))
+                        {
+                            resWithoutSource += item;
+                        }
+                    }
+
 
                     /// Caps
-                    res = res.Split('(')[0];
+                    string resWithoutCaps = "";
+                    string[] splitcaps = Regex.Split(resWithoutSource, @"\(.*?\)");
+
+                    foreach (var item in splitcaps)
+                    {
+                        if (!String.IsNullOrWhiteSpace(item))
+                        {
+                            resWithoutCaps += item;
+                        }
+                    }
+
+                    res = resWithoutCaps;
 
                     /// First is space
 
@@ -37,8 +56,14 @@ namespace AnimeBeautify
                     /// Last is space
                     if (res[res.Count() - 1].ToString() == " ")
                     {
+
                         res = res.Remove(res.Count() - 1, 1);
                     }
+
+                    /// Remove up to 4 spaces (this is bullshit sorry)
+                    res = res.Replace("  ", " ");
+                    res = res.Replace("   ", " ");
+                    res = res.Replace("    ", " ");
 
                 }
                 catch (Exception)
