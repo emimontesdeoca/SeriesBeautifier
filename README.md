@@ -1,9 +1,7 @@
 <h1 align="center">SeriesBeautifier</h1>
 
 <p align="center">
-
-[![https://gyazo.com/e4508afb5fffe43df993555dd755e490](https://i.gyazo.com/e4508afb5fffe43df993555dd755e490.gif)](https://gyazo.com/e4508afb5fffe43df993555dd755e490)
-
+  <img src="https://i.gyazo.com/e4508afb5fffe43df993555dd755e490.gif">
 </p>
 
 <p align="center">
